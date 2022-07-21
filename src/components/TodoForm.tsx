@@ -7,7 +7,7 @@ export const TodoForm = (): JSX.Element => {
 
 
     const [addTodo] = useAddTodoMutation()
-    const onSubmit = (values: Pick<TODO, 'text'>): void => {
+    const onSubmit = (values: Pick<TODO, 'text'>) => {
         addTodo(values);
     };
     return (

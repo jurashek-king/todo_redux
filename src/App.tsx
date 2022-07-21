@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {TodoList} from "./components/TodoList";
 import {Stack} from "@mantine/core";
 import {TodoForm} from "./components/TodoForm";
 
 
-function App(): JSX.Element {
+const App: FC = () => {
 
     return (
         <Stack>

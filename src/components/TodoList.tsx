@@ -1,12 +1,12 @@
-import React from "react";
+import React, {FC} from "react";
 import {List, Loader} from "@mantine/core";
 import {useGetTodosQuery} from "../redux/apiSlice";
 
 
-export const TodoList = (): JSX.Element => {
+export const TodoList: FC = () => {
 
     const {data = [], isLoading, isSuccess, isError, error} = useGetTodosQuery();
-    let content: JSX.Element | undefined;
+    let content = null;
 
     if (isLoading) {
         content = <Loader className="loader"/>;
@@ -19,8 +19,8 @@ export const TodoList = (): JSX.Element => {
     }
 
     return (
-        <>
-            {content}
-        </>
+
+        content
+
     )
 }

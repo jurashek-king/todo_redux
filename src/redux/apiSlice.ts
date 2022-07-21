@@ -10,11 +10,11 @@ export const apiSlice = createApi({
             query: () => '/tasks',
             providesTags:['TODO']
         }),
-        addTodo: builder.mutation({
-            query: initialPost => ({
+        addTodo: builder.mutation<void, Pick<TODO, "text">>({
+            query: todo => ({
                 url: '/tasks',
                 method: 'POST',
-                body: initialPost
+                body: todo
             }),
             invalidatesTags:['TODO']
         })
