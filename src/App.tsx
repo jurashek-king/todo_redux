@@ -1,17 +1,16 @@
-import React, {FC} from 'react';
-import {TodoList} from "./components/TodoList";
-import {Stack} from "@mantine/core";
-import {TodoForm} from "./components/TodoForm";
-
+import React, { FC } from "react";
+import { TodoList } from "./components/TodoList/TodoList";
+import { TodoForm } from "./components/TodoForm/TodoForm";
+import { GlobalStyles } from "./GlobalStyles";
 
 const App: FC = () => {
-
-    return (
-        <Stack>
-            <TodoForm />
-            <TodoList/>
-        </Stack>
-    );
-}
+  return (
+    <>
+      <GlobalStyles />
+      <TodoForm />
+      <TodoList />
+    </>
+  );
+};
 
 export default App;
